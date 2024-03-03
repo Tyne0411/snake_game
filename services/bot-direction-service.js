@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 "use strict";
 const CoordinateService = require("../services/coordinate-service");
 const GameControlsService = require("../services/game-controls-service");
 const ServerConfig = require("../configs/server-config");
+=======
+'use strict';
+const CoordinateService = require('../services/coordinate-service');
+const GameControlsService = require('../services/game-controls-service');
+>>>>>>> be56a47 (Changed double quotes to single quotes)
 
 class BotDirectionService {
 
