@@ -1,17 +1,29 @@
 <html>
     <head>
         <title>Snake</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/global.css">
+        <link rel="stylesheet" type="text/css" href="css/game.css">
+        <link rel="stylesheet" type="text/css" href="css/settings.css">
     </head>
     <body>
-        <a class="anchor" id="top"></a>
+        <a id="top"></a>
         <div id="cover">
+<<<<<<< HEAD
             <div id="navigation">
                 <label>You are </label>
                 <input id="playerName" readonly="readonly" maxlength="10"></input>
                 <a href="#top" id="playOrWatchButton">Watch</a>
                 <a href="#playerSettings">Settings</a>
                 <input id="fullScreenButton" type="submit"/>
+=======
+            <div class="navigation">
+                <label class="nav-label">You are <input id="player-name" readonly="readonly" maxlength="10"></input></label>
+                <div class="nav-button-bar">
+                    <a href="#top" id="play-or-watch-button" title="Spectate or rejoin game">Watch</a>
+                    <a href="#playerSettings" title="Go to settings">Settings</a>
+                    <button id="full-screen-button" title="Go into full-screen mode"/>
+                </div>
+>>>>>>> 2bc0d7a (less reorganization and cleanup)
             </div>
             <div id="killMessages">
             </div>
@@ -30,6 +42,7 @@
                 <div id="playerSettings" class="settingsMenu">
                     <fieldset>
                         <legend>Player Settings</legend>
+<<<<<<< HEAD
                         <label id="invalidPlayerNameLabel">Please Enter a Valid Name (10 Characters Max)</label>
                         <div class="playerInfo">
                             <button id="changePlayerNameButton" class="optionsTextButton">Change Name</button>
@@ -49,6 +62,18 @@
                             <input type="file" id="backgroundImageUpload" accept="image/*"/>
                             <button id="clearUploadedBackgroundImageButton" class="optionsTextButton">Clear Image</button>
                         </div>
+=======
+                        <label id="invalid-player-name-label">Please Enter a Valid Name (10 Characters Max)</label>
+                        <ul class="text-button-list">
+                            <li><button id="changePlayerNameButton" class="options-text-button" title="Change your name">Change Name</button></li>
+                            <li><button id="changePlayerColorButton" class="options-text-button" title="Change your snake's color">Change Color</button></li>
+                            <li><button id="toggleGridLinesButton" class="options-text-button" title="Show or hide grid lines">Toggle GridLines</button></li>
+                            <li><label for="image-upload" class="image-upload-label" title="Customize your snake by uploading an image (Will be scaled down to size)">Change Snake Image<input type="file" id="image-upload" accept="image/*"/></label></li>
+                            <li><button id="clearUploadedImageButton" class="options-text-button" title="Clear uploaded snake image">Clear Image</button></li>
+                            <li><label for="background-image-upload" class="image-upload-label" title="Upload a background image">Change Background Image<input type="file" id="background-image-upload" accept="image/*"/></label></li>
+                            <li><button id="clearUploadedBackgroundImageButton" class="options-text-button"  title="Clear uploaded background image">Clear Image</button></li>
+                        </ul>
+>>>>>>> 2bc0d7a (less reorganization and cleanup)
                     </fieldset>
                 </div>
                 
@@ -56,6 +81,7 @@
                 <div id="adminControls" class="settingsMenu">
                     <fieldset>
                         <legend>Admin Controls</legend>
+<<<<<<< HEAD
                         <div class="optionsControls" class="settingsMenu">
                             <label class="optionsLabel">Speed: </label>
                             <label id="currentSpeed" class="optionsValue"></label>
@@ -83,6 +109,35 @@
                             <input id="decreaseStartLengthButton" type="submit" class="minusButton"/>
                             <input id="increaseStartLengthButton" type="submit" class="plusButton"/>
                             <input id="resetStartLengthButton" type="submit" class="resetButton"/>
+=======
+                        <div class="options-controls" class="settings-menu">
+                            <label class="options-label">Speed: </label>
+                            <label id="currentSpeed" class="options-value"></label>
+                            <button id="decreaseSpeedButton" class="minus-button" title="-1"/>
+                            <button id="increaseSpeedButton" class="plus-button" title="+1"/>
+                            <button id="resetSpeedButton" class="reset-button" title="Reset to Default"/>
+                        </div>
+                        <div class="options-controls" class="settings-menu">
+                            <label class="options-label">Food: </label>
+                            <label id="currentFoodAmount" class="options-value"></label>
+                            <button id="decreaseFoodButton" class="minus-button" title="-1"/>
+                            <button id="increaseFoodButton" class="plus-button" title="+1"/>
+                            <button id="resetFoodButton" class="reset-button" title="Reset to Default"/>
+                        </div>
+                        <div class="options-controls">
+                            <label class="options-label">Bots: </label>
+                            <label id="currentNumberOfBots" class="options-value"></label>
+                            <button id="decreaseBotsButton" class="minus-button" title="-1"/>
+                            <button id="increaseBotsButton" class="plus-button" title="+1"/>
+                            <button id="resetBotsButton" class="reset-button" title="Reset to Default"/>
+                        </div>
+                        <div class="options-controls">
+                            <label class="options-label">Start Length: </label>
+                            <label id="currentStartLength" class="options-value"></label>
+                            <button id="decreaseStartLengthButton" class="minus-button" title="-1"/>
+                            <button id="increaseStartLengthButton" class="plus-button" title="+1"/>
+                            <button id="resetStartLengthButton" class="reset-button" title="Reset to Default"/>
+>>>>>>> 2bc0d7a (less reorganization and cleanup)
                         </div>
                     </fieldset>
                 </div> 
