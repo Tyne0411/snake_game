@@ -8,7 +8,13 @@ function (ClientConfig, DomHelper) {
     
     const ENTER_KEYCODE = 13;
     const SPACE_BAR_KEYCODE = 32;
+<<<<<<< HEAD
     const UP_ARROW_KEYCODE = 38;
+=======
+    const LEFT_ARROW_KEYCODE = 37;
+    const UP_ARROW_KEYCODE = 38;
+    const RIGHT_ARROW_KEYCODE = 39;
+>>>>>>> refs/rewritten/Updated-jshint-with-checks-from-AirBnb-s-style-guide
     const DOWN_ARROW_KEYCODE = 40;
     
     class GameView {
