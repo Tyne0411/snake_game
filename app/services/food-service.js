@@ -44,9 +44,9 @@ class FoodService {
                 this.boardOccupancyService.addPlayerOccupancy(otherPlayer.id, otherPlayer.getSegments());
                 this.boardOccupancyService.addPlayerOccupancy(playerWhoConsumedFood.id, playerWhoConsumedFood.getSegments());
                 this.notificationService.notifyPlayerFoodCollected(playerWhoConsumedFood.id,
-                    'Swap!', food.location, food.color);
+                    'Swap!', food.coordinate, food.color, true);
                 this.notificationService.notifyPlayerFoodCollected(otherPlayer.id,
-                    'Swap!', playerWhoConsumedFood.getHeadLocation(), food.color);
+                    'Swap!', playerWhoConsumedFood.getHeadCoordinate(), food.color, true);
             } else {
                 this.notificationService.notifyPlayerFoodCollected(playerWhoConsumedFood.id,
                     `+${points}`, food.location, food.color);

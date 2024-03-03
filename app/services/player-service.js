@@ -129,10 +129,12 @@ class PlayerService {
                     const killer = this.playerContainer.getPlayer(killReport.killerId);
                     this.notificationService.broadcastKill(killer.name, victim.name, killer.color, victim.color,
                         victim.getSegments().length);
+                    this.notificationService.notifyPlayerMadeAKill(killReport.killerId);
                 }
                 this.boardOccupancyService.removePlayerOccupancy(victim.id, victim.getSegments());
                 victim.clearAllSegments();
                 this.playerContainer.addPlayerIdToRespawn(victim.id);
+                this.notificationService.notifyPlayerDied(victim.id);
             } else {
                 const victimSummaries = [];
                 for (const victimId of killReport.getVictimIds()) {
@@ -141,6 +143,7 @@ class PlayerService {
                     victim.clearAllSegments();
                     this.playerContainer.addPlayerIdToRespawn(victim.id);
                     victimSummaries.push({ name: victim.name, color: victim.color });
+                    this.notificationService.notifyPlayerDied(victim.id);
                 }
                 if (victimSummaries.length > 0) {
                     this.notificationService.broadcastKillEachOther(victimSummaries);
@@ -161,6 +164,7 @@ class PlayerService {
                 player.clearAllSegments();
                 this.playerContainer.addPlayerIdToRespawn(player.id);
                 this.notificationService.broadcastRanIntoWall(player.name, player.color);
+                this.notificationService.notifyPlayerDied(player.id);
             } else {
                 this.boardOccupancyService.addPlayerOccupancy(player.id, player.getSegments());
             }
